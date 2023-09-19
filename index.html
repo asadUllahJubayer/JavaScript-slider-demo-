@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <div style="text-align: center;">
+        <div style="text-align: center;">
+            <h3 style="font-family:'Arial Narrow', Arial, sans-serif"> This is a news portal</h3>
+            
+            <div><h2 style="color:rgb(15, 77, 209); font-size: 30px;font-family: Georgia,
+            'Times New Roman', Times, serif;">
+                Amar Chokh</h2>
+            </div>
+        
+            <img id="images" style="color:goldenrod; width: 600px; height: 300px;" alt="">
+                <h1 id="demo"></h1>
+
+                <p>Lorem ipsum dolor sit amet.</p>
+                <p>Sed cupiditate earum est corporis?</p>
+                <p>Fuga, incidunt. Blanditiis, ducimus odio!</p>
+                <p>Quo commodi vitae odio dolor!</p>
+                <p>Neque quo vero ipsam rerum.</p>
+            
+            
+        </div>   
+    </div>
+</body>
+<script>
+//        function show_image(src, width, height, alt) {
+//     var img = document.createElement("img");
+//     img.src = src;
+//     img.width = width;
+//     img.height = height;
+//     img.alt = alt;
+
+//     // This next line will just add it to the <body> tag
+//     document.body.appendChild(img);
+// }
+
+// my image slider 
+        let link = document.querySelector('img');
+          let image= "image"
+            let images= ['img1.jpg', 'img2.jpg', 'img3.jpg']
+            for(let i=0; i<images.length; i++){
+            
+                // "image/" + e
+                window.setInterval(function(){
+                    let e = images[i++ % 3];
+                    link.setAttribute('src', `image/${e}`);
+                     console.log(e)
+                     },4000)
+                       if(i == images.length){
+                            i = 0;
+                       } 
+            }
+ 
+   
+    
+
+
+    
+    
+   
+  
+
+        const crs = ['red', 'blue', 'green','goldenrod', 'orenge']
+    //console.log(crs)
+   
+   // window.setInterval(function() {
+
+        let colorChange = 0
+        for (let i=0; i <= 5; i++){
+            // let cr = crs[i]
+           
+           //console.log(cr)
+            window.setInterval(function(){
+            
+                let cr = crs[i++ % 5];
+                document.getElementById("demo").style.color= cr;
+                document.getElementById("demo").innerHTML= `The color is ${cr}`;
+
+                console.log(cr)
+         
+             },4000)
+           
+                // if(i == 2){
+                //     i = 0;
+                // }
+        }
+
+   // }, 6000);
+//     for (let i = 0; i < cars.length; i++) {
+//   text += cars[i] + "<br>";
+// }
+ 
+    //document.getElementById("demo").innerHTML = show_image;
+    </script>
+</html>
